@@ -1,0 +1,6 @@
+/.idea
+/venv-win
+tfdata.py
+testfile.py
+*.csv
+*.ods
