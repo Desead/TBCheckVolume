@@ -7,9 +7,9 @@ from tfdata import Token, AccountNum
 
 TOKEN = Token.broker_full
 ACCOUNT_ID = AccountNum.broker
-SANDBOX = True
 FIGI = 'FUTSBRF06220'
 DEPTH = 50  # max = 50
+NEED_DELTA = 10  # %
 
 
 def GetDepthMarket(client, figi, depth):
@@ -32,6 +32,8 @@ def CalcBigVolume(price, volume):
     print(max_volume)
     print(mean)
     print(mediana)
+    print(st.quantiles(volume))
+    print(st.stdev(volume))
 
 
 def main():
@@ -40,8 +42,6 @@ def main():
         print(ask_price)
         print(ask_volume)
         CalcBigVolume(ask_price, ask_volume)
-        print(ask_price)
-        print(ask_volume)
 
 
 if __name__ == '__main__':
