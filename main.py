@@ -3,10 +3,9 @@ from statistics import median
 from tinkoff.invest import Client
 
 from lib.func import Qt
-from tfdata import Token, AccountNum
+from tfdata import Token
 
 TOKEN = Token.broker_full
-ACCOUNT_ID = AccountNum.broker
 FIGI = 'FUTSBRF06220'
 DEPTH = 50  # max = 50
 MIN_DELTA = 10  # min multiplier for find max volume
